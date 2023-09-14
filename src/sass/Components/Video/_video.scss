@@ -1,0 +1,57 @@
+@import "./Introduction/introduction";
+
+.video {
+    @include sizeMainElements(100vw, 40rem);
+    @include flexCenter;
+    flex-direction: column;
+    background-color: #F8F8F8;
+
+    .video__container {
+        @include sizeMainElements(80vw, 30rem);
+        @include flexCenter;
+        flex-direction: column;
+
+        .video__youtube {
+            @include sizeMainElements(80vw, 11.9475rem);
+            position: relative;
+            bottom: 5rem;
+
+            .video__coldPlay {
+                @include sizeMainElements(100%, 100%);
+            }
+        }
+    }
+
+    @media (min-width: 600px) {
+        .video__container {
+            .video__youtube {
+                height: 20rem;
+                bottom: 4rem;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .video__container {
+            .video__youtube {
+                height: 50rem;
+                bottom: 0rem;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        height: 32rem;
+
+        .video__container {
+            height: 20rem;
+            @include flexBetween;
+            flex-direction: row;
+            gap: 1rem;
+            
+            .video__youtube {
+                @include sizeMainElements(28rem, 16rem);
+            }
+        }
+    }
+}

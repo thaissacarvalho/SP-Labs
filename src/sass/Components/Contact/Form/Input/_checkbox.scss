@@ -1,0 +1,44 @@
+.form__checkbox {
+    @include sizeMainElements(100%, 4rem);
+    display: flex;
+    gap: 1rem;
+    text-align: left;
+
+    .form__check {
+        align-self: flex-start;
+        border-radius: 0.25rem;
+        border: 0.0625rem solid $gray;
+        background: $lightGray;
+    }
+
+    .check--checked:checked {
+        background-color: $green;
+        border-color: $green;
+    }
+
+    .form__label {
+        font-size: 0.875rem;
+    }
+}
+
+.form__checkbox input[type="checkbox"] {
+    @include sizeItens(1.5rem, 1.5rem, 0.25rem);
+    background-color: $lightGray;
+    appearance: none;
+
+    flex-shrink: 0;
+
+    border: 1px solid $gray;
+
+    position: relative;
+    bottom: 0.2rem;
+}
+
+.form__checkbox input[type="checkbox"]:checked::before {
+    content: "✔︎";
+    font-size: 1rem;
+    position: absolute;
+    top: 0.15rem;
+    left: .32rem;
+    color: $white;
+  }

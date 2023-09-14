@@ -1,0 +1,78 @@
+@import "./Input/checkbox";
+
+.form {
+    @include sizeMainElements(20.625rem, 36.9375rem);
+    @include flexCenter;
+
+    .form__container {
+        @include flexCenter;
+        width: 266px;
+        flex-direction: column;
+        border-radius: 0.5rem;
+        background: #ffffffcc;
+        box-shadow: 0rem 0rem 3.125rem 0rem rgba(0, 0, 0, 0.10);
+        padding: 2rem;
+        gap: 1rem;
+
+        .form__input,
+        .form__select,
+        .form__textarea {
+            @include sizeItens(100%, 2.8125rem, 0.25rem);
+            border: 1px solid $lightGray;
+            text-indent: 1rem;
+
+            &::placeholder {
+                @include fontChange($darkGray, 1rem, 500);
+            }
+        }
+
+        .box--change:hover {
+            border-color: $gray;
+        }
+
+        .box--change:focus {
+            outline: none;
+            border: 2px solid $green;
+        }
+
+        .form__select {
+            @include sizeMainElements(102.26%, 3.063rem);
+
+            &::placeholder {
+                font-size: 2rem;
+            }
+        }
+
+        .form__textarea {
+            height: 10.875rem;
+            resize: none;
+            font-size: 1rem;
+
+            &::placeholder {
+                font-size: 0.7rem;
+                position: relative;
+                top: 0.5rem;
+            }
+        }
+
+        .form__button {
+            @include sizeItens(100%, 2.8125rem, 0.25rem);
+            @include fontChange($darkGray, 0.875rem, 500);
+            background-color: $lightGreen;
+            border: 1px solid $lightGreen;
+            cursor: pointer;
+        }
+
+        .error {
+            color: red;
+        }
+    }
+
+    @media(min-width: 600px) {
+        width: 27.5rem;
+
+        .form__container {
+            width: 356px;
+        }
+    }
+}

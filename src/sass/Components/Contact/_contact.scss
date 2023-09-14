@@ -1,0 +1,16 @@
+@import "./Form/form";
+
+.contact {
+    background: radial-gradient(54.98% 51.99% at 0% 100%, #5DFED6 0%, rgba(93, 254, 214, 0.00) 100%);
+    @include sizeMainElements(100vw, 53.9375rem);
+    @include flexCenter;
+
+    .contact__container {
+        @include sizeMainElements(80vw, 100vh);
+        @include flexCenter;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+}
+

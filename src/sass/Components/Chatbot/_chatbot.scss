@@ -1,0 +1,54 @@
+@import "./ChatMessage/chatMessage";
+
+.chatbot__container {
+    @include sizeMainElements(3rem, 3rem);
+    position: fixed;
+    bottom: 1.5rem;
+    right: 2rem;
+    z-index: 1000;
+
+    .chatbot__floating {
+        @include sizeItens(3rem, 3rem, 100%);
+        background-color: $darkGray;
+        border: 1px solid $darkGray;
+        outline: none;
+        display: flex;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+
+        .floating__icon {
+            @include fontChange($white, 1.5rem, 700);
+            position: relative;
+            top: 0.2rem;
+        }
+    }
+
+    .chatbot__chat {
+        @include sizeItens(386px, auto, 0.9375rem);
+        @include flexCenter;
+        position: fixed;
+        right: 2.1875rem;
+        bottom: 5rem;
+        width: 24.125rem;
+        background: $white;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(0.5);
+        transform-origin: bottom right;
+        box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1), 0 32px 64px -48px rgba(0, 0, 0, 0.5);
+        transition: all 0.1s ease;
+    }
+}
+
+
+body.show-chatbot {
+    .chatbot__chat {
+        opacity: 1;
+        pointer-events: auto;
+        transform: scale(1);
+
+    }
+}

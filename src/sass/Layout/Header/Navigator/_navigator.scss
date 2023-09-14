@@ -1,0 +1,13 @@
+.navigator {
+    @include flexCenter;
+    color: $white;
+
+    .list__navigator {
+        display: flex;
+        gap: 2rem;
+
+        .list__navLink {
+            color: $white;
+        }
+    }
+}

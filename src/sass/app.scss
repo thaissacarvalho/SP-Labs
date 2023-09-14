@@ -1,0 +1,13 @@
+@import "./Abstracts/abstracts";
+@import "./Components/components";
+@import "./Core/core";
+@import "./Layout/layout";
+@import "./Pages/pages";
+
+body {
+    font-family: $fontPattern;
+}
+
+main {
+    width: 100vw;
+}

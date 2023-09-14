@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&display=swap');
+
+.hero__container {
+    @include sizeItens(80vw, 22.28781rem, 0);
+    @include flexCenter;
+    flex-direction: column;
+    gap: 1rem;
+
+    .hero__text {
+        @include fontChange($white, 3.5rem, 700);
+
+        .text__change {
+            position: relative;
+            left: 1rem;
+            font-family: 'Bodoni Moda', serif;
+        }
+    }
+
+    .text__description {
+        @include fontChange($white, 1.125rem, 600);
+    }
+
+    @media (min-width: 768px) {
+        @include sizeMainElements(40rem, auto);
+        align-items: start;
+    }
+}

@@ -1,0 +1,6 @@
+.title {
+    .title__link{
+        @include fontChange(black, 1rem, 700);
+        font-weight: 700;
+    }
+}

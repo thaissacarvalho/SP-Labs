@@ -1,0 +1,98 @@
+.chat__message {
+    width: 25rem;
+
+    .chat__container {
+        @include flexCenter;
+        flex-direction: column;
+
+        .chat__header {
+            @include sizeMainElements(22.125rem, 2.5rem);
+            @include flexBetween;
+            position: relative;
+            top: 1.5rem;
+
+            .chat__button {
+                @include sizeItens(5.25rem, 1.4375rem, 0.5rem);
+                @include flexCenter;
+                gap: 0.2rem;
+                background-color: transparent;
+                border: 1px solid $lightGray;
+
+                .chat__text {
+                    @include fontChange($darkGray, 0.75rem, 400);
+                    @include flexCenter;
+                }
+
+                .chat__icon {
+                    position: relative;
+                    top: 0.0938rem;
+                }
+            }
+        }
+
+        .chat__hello {
+            width: 20rem;
+            padding: 1.5rem 1.5rem 1rem;
+            align-self: flex-start;
+            position: relative;
+            top: 2rem;
+
+            .chat__title {
+                @include fontChange($black, 1.25rem, 400);
+            }
+        }
+
+        .chat__box {
+            @include flexCenter;
+            width: 22.125rem;
+            border-top: 1px solid $darkGray;
+            position: relative;
+            top: 3rem;
+
+            .chat__placebox {
+                @include fontChange($gray, 12px, 400);
+            }
+        }
+
+        .chat__input {
+            @include sizeMainElements(22.125rem, 2.5rem);
+            @include flexCenter;
+            gap: 0.5rem;
+            position: relative;
+            top: 4.2rem;
+
+            .chat__text {
+                @include sizeItens(18.5rem, 2.5rem, 1rem);
+                resize: none;
+                text-indent: 1rem;
+                outline: none;
+                border: 2px solid $lightGray;
+            }
+
+            .chat__send {
+                @include sizeItens(3.125rem, 2.5rem, 1rem);
+                @include flexCenter;
+                background-color: $lightGreen;
+                border: none;
+                cursor: pointer;
+
+                .chat__icon {
+                    @include fontChange($black, 1rem, 700);
+                }
+            }
+
+            .text--change:hover {
+                border-color: $gray;
+                outline: none;
+            }
+
+            .text--change:focus {
+                border-color: $green;
+            }
+
+            .send--change:hover {
+                background-color: $green;
+            }
+        }
+    }
+}

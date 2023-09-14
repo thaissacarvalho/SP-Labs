@@ -1,0 +1,20 @@
+.button__link {
+    @include sizeItens(20.625rem, 2.813rem, 0.25rem);
+    @include fontChange($darkGray, 0.875rem, 500);
+    @include flexCenter;
+    background-color: $lightGreen;
+    border: $lightGreen solid;
+    align-self: flex-start;
+    cursor: pointer;
+
+    .button__hero {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+.button--change:hover {
+    background-color: $green;
+    border: $green;
+}

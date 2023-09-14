@@ -1,0 +1,35 @@
+@import "./CopyRight/copyRight";
+@import "./Information/information";
+
+.footer {
+    @include sizeMainElements(100vw, 100vh);
+    @include flexCenter;
+    flex-direction: column;
+    gap: 4rem;
+
+    .footer__container {
+        @include sizeMainElements(80vw, auto);
+        @include flexCenter;
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .line__footer {
+        background-color: $lightGreen;
+        @include sizeItens(80vw, 0.125rem, 0);
+    }
+
+    @media (min-width: 768px) {
+        @include flexCenter;
+        height: 422px;
+
+        .footer__container {
+            @include flexBetween;
+            flex-direction: row;
+
+            .logo {
+                align-self: start;
+            }
+        }
+    }
+}

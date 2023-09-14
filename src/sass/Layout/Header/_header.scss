@@ -1,0 +1,6 @@
+@import "./Navigator/navigator";
+
+.header {
+    @include sizeItens(80vw, 15vh, 0);
+    @include flexBetween;
+}

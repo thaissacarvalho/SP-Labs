@@ -1,0 +1,51 @@
+.solutions {
+    @include sizeMainElements(80vw, 100vh);
+
+    .solutions__container {
+        @include sizeMainElements(80vw, 75vh);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .solutions__item {
+            @include sizeMainElements(80vw, auto);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .solutions__title {
+                font-size: 1.5rem;
+                color: $black;
+                font-weight: 700;
+            }
+
+            .solutions__description {
+                color: $darkGray;
+                font-size: 1.1rem;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        height: 100vh;
+
+        .solutions__container {
+            @include sizeMainElements(80vw, 75vh);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 1rem;
+
+            .solutions__item {
+                width: 38vw;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .solutions__container {
+            height: 80vh;
+            gap: 3rem;
+        }
+    }
+}

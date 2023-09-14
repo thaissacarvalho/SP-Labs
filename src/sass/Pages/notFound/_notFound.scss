@@ -1,0 +1,38 @@
+.main__notFound {
+    @include sizeMainElements(100vw, 100vh);
+    @include flexCenter;
+    flex-direction: column;
+    background-color: $white;
+    gap: 1rem;
+
+    .main__icon {
+        @include sizeMainElements(10rem, 10rem);
+        @include fontChange($green, 10rem, 400);
+    }
+
+    .main__container {
+        @include flexCenter;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 2rem;
+
+        .main__text {
+            @include fontChange($darkGray, 2rem, 700);
+        }
+
+        .main__back {
+            @include fontChange($darkGray, 1rem, 600);
+            @include sizeItens(12.5rem, 3.125rem, 0.25rem);
+            background-color: $lightGreen;
+            border: 1px solid $lightGreen;
+            cursor: pointer;
+        }
+
+        .back--change:hover {
+            color: $lightGreen;
+            background-color: $darkGray;
+            border: 1px solid $darkGray;
+        }
+
+    }
+}

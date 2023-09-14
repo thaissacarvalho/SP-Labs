@@ -1,0 +1,15 @@
+.button__learnMore {
+    @include sizeItens(9.875rem, 2.5rem, 0.25rem);
+    @include flexCenter;
+    background-color: transparent;
+    border: solid $gray;    
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: $darkGray;
+    cursor: pointer;
+
+}
+
+.learnMore--change:hover {
+    border-color: $darkGray;
+}

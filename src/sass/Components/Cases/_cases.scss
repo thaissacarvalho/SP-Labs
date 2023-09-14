@@ -1,0 +1,51 @@
+@import "./Introduction/introduction";
+@import "./Solutions/solutions";
+
+.cases {
+    @include sizeMainElements(100vw, 93.75rem);
+    @include flexCenter;
+
+    .cases__container {
+        @include sizeMainElements(80vw, 100vh);
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        position: relative;
+        bottom: 20rem;
+
+        .container__solutions {
+            @include sizeMainElements(80vw, 100vh);
+        }
+    }
+
+    @media (min-width: 414px){
+        .cases__container {
+            bottom: 18rem;
+        }
+    }
+
+    @media (min-width: 600px) {
+        .cases__container {
+            bottom: 10rem;
+        }
+    }
+
+    @media (min-width: 768px) {
+        height: 70rem;
+
+        .cases__container {
+            top: 3rem;
+            bottom: 0;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        height: 60rem;
+
+        .cases__container {
+           top: -6rem;
+        }
+    }
+
+
+}

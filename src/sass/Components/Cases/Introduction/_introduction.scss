@@ -1,0 +1,36 @@
+.introduction {
+    @include sizeMainElements(80vw, 100vh);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .introduction__container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .introduction__title {
+            font-weight: 700;
+            font-size: 1.75rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+
+            .introduction__risk {
+                text-decoration: line-through;
+            }
+
+            .introduction__italic {
+                font-style: italic;
+            }
+        }
+    }
+
+    .introduction__description{
+        color: $darkGray;
+    }
+
+    @media (min-width: 768px) {
+        height: 10.875rem;
+    }
+}

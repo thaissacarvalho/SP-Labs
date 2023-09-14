@@ -1,0 +1,15 @@
+.introduction {
+    @include sizeMainElements(80vw, 18.375rem);
+
+    .introduction__title {
+        @include fontChange($black, 1.8rem, 700);
+    }
+
+    .introduction__description{
+        @include fontChange($darkGray, 1.125rem, 400);
+    }
+
+    @media (min-width: 1024px) {
+        @include sizeMainElements(40vw, 60%);
+    }
+}

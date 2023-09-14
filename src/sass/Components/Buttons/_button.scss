@@ -1,0 +1,8 @@
+@import "./ButtonHero/buttonHero";
+@import "./ButtonLearnMore/learnMore";
+
+.button--change::hover {
+    background-color: $green;
+    border: $green 0.25rem;
+    cursor: pointer;
+}

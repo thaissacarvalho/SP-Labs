@@ -1,0 +1,28 @@
+@mixin fontChange($color, $fontSize, $fontWeight) {
+    color: $color;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+}
+
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin sizeItens($sizeWidth, $sizeHeight, $sizeRadius) {
+    width: $sizeWidth;
+    height: $sizeHeight;
+    border-radius: $sizeRadius;
+} 
+
+@mixin sizeMainElements($sizeMainWidth, $sizeMainHeight){
+    width: $sizeMainWidth;
+    height: $sizeMainHeight;
+}
