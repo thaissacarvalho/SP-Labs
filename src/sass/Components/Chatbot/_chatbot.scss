@@ -25,6 +25,15 @@
         }
     }
 
+    .floating--change:hover {
+        background-color: $lightGreen;
+        border-color: $lightGreen;
+
+        .icon--change:hover {
+            color: $darkGray;
+        }
+    }
+
     .chatbot__chat {
         @include sizeItens(386px, auto, 0.9375rem);
         @include flexCenter;
@@ -49,6 +58,5 @@ body.show-chatbot {
         opacity: 1;
         pointer-events: auto;
         transform: scale(1);
-
     }
 }

@@ -17,10 +17,10 @@ export default function Chatbot() {
     <>
     <div className="chatbot__container">
       <button
-        className="chatbot__floating"
+        className="chatbot__floating floating--change"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <h1 className="floating__icon">{isOpen ? <BiChevronDown /> : <BiComment />}</h1>
+        <h1 className="floating__icon icon--change">{isOpen ? <BiChevronDown /> : <BiComment />}</h1>
       </button>
       {isOpen && (
         <div className="chatbot__chat">

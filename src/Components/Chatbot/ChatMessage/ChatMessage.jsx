@@ -9,6 +9,7 @@ export default function ChatMessage() {
   const [userMessage, setUserMessage] = useState('');
   const [chatMessages, setChatMessages] = useState([]);
   const [chatHistory, setChatHistory] = useState([]);
+  const token = localStorage.getItem("token");
 
   useEffect(() => {
     const chatHistoryFromLocalStorage = localStorage.getItem('chatHistory');
@@ -22,24 +23,33 @@ export default function ChatMessage() {
     setExpanded(!expanded);
   };
 
+
+
   const handleChat = () => {
-    API
-      .post("/api/chat", {
+    API.post("/api/chat", {
+      headers: { auth: token },
+      body: {
         message: userMessage,
-      })
+      }
+    })
+
       .then((response) => {
-        setChatMessages([...chatMessages, {
+        const newUserMessage = {
           type: "chat__user",
           message: userMessage,
           alignment: "right",
-        }]);
+          date: new Date(),
+        };
 
-        setChatMessages([...chatMessages, {
+        const newBotMessage = {
           type: "chat__bot",
           message: response.data.message,
           alignment: "left",
           icon: chatAvatar,
-        }]);
+          date: new Date(),
+        };
+
+        setChatMessages((prevMessages) => [newUserMessage, newBotMessage, ...prevMessages]);
 
         const newChatHistory = [...chatHistory, {
           message: userMessage,
@@ -47,11 +57,13 @@ export default function ChatMessage() {
         }];
         setChatHistory(newChatHistory);
 
-        localStorage.setItem('chatHistory', JSON.stringify(chatHistory));
+        localStorage.setItem('chatHistory', JSON.stringify(newChatHistory));
       })
       .catch((error) => {
         console.log(error);
       });
+
+    setUserMessage('');
   };
 
   return (
