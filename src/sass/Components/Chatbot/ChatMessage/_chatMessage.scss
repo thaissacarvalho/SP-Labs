@@ -48,9 +48,28 @@
             border-top: 1px solid $darkGray;
             position: relative;
             top: 3rem;
+            gap: 1rem;
 
             .chat__placebox {
-                @include fontChange($gray, 12px, 400);
+                @include fontChange($gray, 0.75rem, 400);
+            }
+
+            .chat__user,  .chat__bot{
+                @include sizeMainElements(10rem, 1.9375rem);
+                @include fontChange($black, 0.75rem, 400);
+                max-width: 17.5rem;
+                padding: 0.5rem 1rem;
+            }
+
+            .chat__user {
+                border-radius: 1rem 1rem 0 1rem;
+                border: 1px solid $lightGray;
+            }
+
+            .chat__bot{
+                border-radius: 0 1rem 1rem 1rem;
+                background-color: $lightMoreGray;
+                border: 1px solid $lightMoreGray;
             }
         }
 
